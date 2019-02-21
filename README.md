@@ -22,3 +22,9 @@ This section will list and briefly explain the platforms and services we'll use 
 ## Build flow
 
 It always helps to know the end goal of a project to better understand what features to implement. Below is a list of steps we’ll take to reach our end goal: 
+
+- Build a web scraper In python,
+- Containerise the python web scraper using Docker,
+- Upload Docker container of the web scraper to Docker Hub,
+- Deploy the container to IBM cloud,
+- Create time controlled triggers on the cloud functions service
