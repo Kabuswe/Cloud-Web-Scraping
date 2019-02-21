@@ -55,6 +55,7 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   
   Now that you have added python to the path environment variable you can now execute python scripts in command prompt or in a supported code editor of your choice. 
   To execute a python script in command prompt, you can use the following syntax : 
-  ```
+  ```console
   C:\>python <script_name>.py
-```
+  ```
+  
