@@ -62,6 +62,17 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   ```console
   C:\>py -2.7 <script_name>.py
   ```
+
+- ### Installing the packages:
+  
+  The python packages we’ll be using don’t come preinstalled with python, so you’ll need to download and install each one. Python uses **pip** to install packages. Pip is a package management system used to install and manage software packages written in Python. To install packages using pip, open command prompt and type:
+   ```console
+  C:\>pip install <package_name>
+  ```
+  If you have a different version of python already installed and has its path in the path environment variable then you have to type:
+    ```console
+  C:\>py -2.7 –m pip install <package_name>
+  ```
   
   
   
