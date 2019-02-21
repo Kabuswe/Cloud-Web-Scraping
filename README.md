@@ -7,3 +7,13 @@ This article will help you build a web scraper and upload it to work autonomousl
 They're several web scraping techniques that exist and that can be done in several programming languages, you’re free to choose your preferred tool to get the work done. In this article we’ll be working with the python programming language. No need to worry, the syntax is fairly simple and easy to understand and of course I’ll be explaining every step so you don’t get confused. If you already understand basic python programming syntax, this will be a breeze. Hang in there and let’s get it done.
 So what will our web scraper do? Our web scraper is going to be assigned the task of extracting news articles from a news site. Because the main reason one would want an autonomous web scraper is to extract data that is constantly being updated. 
 
+**Disclaimer: before scraping any website be sure to read their user terms and conditions. Some sites may take legal action if you don't follow usage guidelines.**  
+
+## Platforms and services 
+
+This section will list and briefly explain the platforms and services we'll use for our cloud based web scraper example.
+
+- **IBM cloud platform:**  this will be our cloud platform of choice, for the reason being that you can access several services without having to provide credit card information. For our example we'll get to work with :
+  - Cloud functions service : this service will allow us to execute our web scraper on the cloud. 
+  - Cloudant : a non-relational, distributed database service. We'll use this to store the data we scrape.
+
