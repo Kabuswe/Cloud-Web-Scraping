@@ -14,6 +14,11 @@ So what will our web scraper do? Our web scraper is going to be assigned the tas
 This section will list and briefly explain the platforms and services we'll use for our cloud based web scraper example.
 
 - **IBM cloud platform:**  this will be our cloud platform of choice, for the reason being that you can access several services without having to provide credit card information. For our example we'll get to work with :
-  - Cloud functions service : this service will allow us to execute our web scraper on the cloud. 
-  - Cloudant : a non-relational, distributed database service. We'll use this to store the data we scrape.
+  - **Cloud functions service:** this service will allow us to execute our web scraper on the cloud. 
+  - **Cloudant:** a non-relational, distributed database service. We'll use this to store the data we scrape.
+- **Docker container platform:** this platform we'll allow us to containerize our web scraper in a well defined environment with all necessary dependencies. This action allows our web scraper to work on any given platform that supports docker containers. In our example our docker container will be used by the *ibm cloud functions service*. 
+- **Cloud phantomjs platform:** this platform will help render the web pages from the HTTP requests we'll make on the cloud. Once a page is rendered the response is returned as HTML.
 
+## Build flow
+
+It always helps to know the end goal of a project to better understand what features to implement. Below is a list of steps we’ll take to reach our end goal: 
