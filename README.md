@@ -27,4 +27,4 @@ It always helps to know the end goal of a project to better understand what feat
 - Containerise the python web scraper using Docker,
 - Upload Docker container of the web scraper to Docker Hub,
 - Deploy the container to IBM cloud,
-- Create time controlled triggers on the cloud functions service
+- Create time controlled triggers on the IBM cloud functions service
