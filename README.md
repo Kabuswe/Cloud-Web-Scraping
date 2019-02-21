@@ -38,7 +38,7 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
 
 - ### Setting up the environment: 
 
-  We’ll be building our web scraper in the **python 2.7 environment**. To get python 2.7 follow this link https://www.python.org/downloads/release/python-2715/ and choose the installer specific to you OS and system type. Download and install using the installer. 
+  We’ll be building our web scraper in the **python 2.7 environment**. To get python 2.7 follow this link https://www.python.org/downloads/release/python-2715/ and choose the installer specific to your OS and system type. Download and install using the installer. 
   
   Once installed your machine is ready to execute python script. My machine? I thought you said we are going to be working on the cloud. No need to panic we’re getting there. Before we can deploy our web scraper to the cloud we first need to run tests on our machine to make sure it’s working error free. 
   
@@ -52,3 +52,9 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   - Under **user variables**, select **path** and click the **modify button**
   - Click **new** and paste the path you copied earlier
   - Restart your machine
+  
+  Now that you have added python to the path environment variable you can now execute python scripts in command prompt or in a supported code editor of your choice. 
+  To execute a python script in command prompt, you can use the following syntax : 
+  ```
+  C:\>python <script_name>.py
+```
