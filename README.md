@@ -58,4 +58,10 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   ```console
   C:\>python <script_name>.py
   ```
+  If you had a different version of python already added to the PATH environment variable then you need to specify what version you want to use. In our case we want to execute our script using version 2.7. To do that you can use the following syntax : 
+  ```console
+  C:\>py -2.7 <script_name>.py
+  ```
+  
+  
   
