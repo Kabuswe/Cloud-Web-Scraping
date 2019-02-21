@@ -29,3 +29,9 @@ It always helps to know the end goal of a project to better understand what feat
 - Upload Docker container of the web scraper to Docker Hub,
 - Deploy the container to IBM cloud,
 - Create time controlled triggers on the IBM cloud functions service
+
+## 1.  Build a web scraper in python
+
+Python proposes several libraries for your web scraping needs, ranging from the **requests library** for making HTTP requests to **selenium** for browser automation and testing. These libraries are very useful if you’re using your machine but for our use case, we want it to work on the cloud independent of our machines and the network latency we are subjected to. You can read about selenium web browser automation here https://www.seleniumhq.org/. 
+
+In our example we’ll be using **cloud phantomjs**, which will be responsible for rendering our website on the cloud and **unirest library** to make an http request to cloud phantomjs. Unirest is an open source library that allows us to make HTTP requests for simple html websites and also JavaScript driven websites. You can further read on Unirest here http://unirest.io/python.html. Once the request is made, a response is returned in the form of html. To be able to navigate through the html tags, we have to properly parse the response. But how? The answer is **Beautiful Soup**, another python library that allows us to parse the html response. Once parsed we can then easily navigate through the html tags programmatically with Beautiful Soup. 
