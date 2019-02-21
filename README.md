@@ -16,7 +16,8 @@ This section will list and briefly explain the platforms and services we'll use 
 - **IBM cloud platform:**  this will be our cloud platform of choice, for the reason being that you can access several services without having to provide credit card information. For our example we'll get to work with :
   - **Cloud functions service:** this service will allow us to execute our web scraper on the cloud. 
   - **Cloudant:** a non-relational, distributed database service. We'll use this to store the data we scrape.
-- **Docker container platform:** this platform we'll allow us to containerize our web scraper in a well defined environment with all necessary dependencies. This action allows our web scraper to work on any given platform that supports docker containers. In our example our docker container will be used by the *ibm cloud functions service*. 
+- **Docker container platform:** this platform we'll allow us to containerize our web scraper in a well defined environment with all necessary dependencies. This action allows our web scraper to work on any given platform that supports docker containers. In our example our docker container will be used by the *ibm cloud functions service*.
+- **Github:** we'll use Github for version control and also to link to our docker container. Linking our docker container to a github repository containing our web scraper will automatically initiate a new build for our docker container image. The new image will carry all changes made to the repository's content.
 - **Cloud phantomjs platform:** this platform will help render the web pages from the HTTP requests we'll make on the cloud. Once a page is rendered the response is returned as HTML.
 
 ## Build flow
