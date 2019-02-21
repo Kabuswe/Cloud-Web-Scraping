@@ -79,33 +79,33 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   - **Unirest** : to make an HTTP request to cloud phantomjs
   
   ```console
-  C:\>pip install unirest
+  pip install unirest
   ```
    ```console
-  C:\>py -2.7 –m pip install unirest
+  py -2.7 –m pip install unirest
   ```
   - **Urllib3**: used implicitly by unirest to handle HTTP requests
   
   ```console
-  C:\>pip install urllib3
+  pip install urllib3
   ```
    ```console
-  C:\>py -2.7 –m pip install urllib3
+  py -2.7 –m pip install urllib3
   ```
   - **Bs4**: this is the Beautiful soup 4 package, which we’ll use to navigate through the html tags and parse the response from cloud phantomjs to HTML.
   
    ```console
-  C:\>pip install bs4
+  pip install bs4
   ```
    ```console
-  C:\>py -2.7 –m pip install bs4
+  py -2.7 –m pip install bs4
   ```
   - **Lxml**: this package is used by Beautiful soup to parse response objects. Html5lib is another package that can be used for parsing but is relatively slower.
   
   ```console
-  C:\>pip install lxml
+  pip install lxml
   ```
    ```console
-  C:\>py -2.7 –m pip install lxml
+  py -2.7 –m pip install lxml
   ```
   
