@@ -55,22 +55,22 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   
   Now that you have added python to the path environment variable you can now execute python scripts in command prompt or in a supported code editor of your choice. 
   To execute a python script in command prompt, you can use the following syntax : 
-  ```console
+  ```cmd
   C:\>python <script_name>.py
   ```
   If you had a different version of python already added to the PATH environment variable then you need to specify what version you want to use. In our case we want to execute our script using version 2.7. To do that you can use the following syntax : 
-  ```console
+  ```cmd
   C:\>py -2.7 <script_name>.py
   ```
 
 - ### Installing the packages:
   
   The python packages we’ll be using don’t come preinstalled with python, so you’ll need to download and install each one. Python uses **pip** to install packages. Pip is a package management system used to install and manage software packages written in Python. To install packages using pip, open command prompt and type:
-   ```console
+   ```cmd
   C:\>pip install <package_name>
   ```
   If you have a different version of python already installed and have it's path in the path environment variable then you have to type:
-    ```console
+    ```cmd
   C:\>py -2.7 –m pip install <package_name>
   ```
   
@@ -78,34 +78,34 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   
   - **Unirest** : to make an HTTP request to cloud phantomjs
   
-  ```console
+  ```cmd
   pip install unirest
   ```
-   ```console
+   ```cmd
   py -2.7 –m pip install unirest
   ```
   - **Urllib3**: used implicitly by unirest to handle HTTP requests
   
-  ```console
+  ```cmd
   pip install urllib3
   ```
-   ```console
+   ```cmd
   py -2.7 –m pip install urllib3
   ```
   - **Bs4**: this is the Beautiful soup 4 package, which we’ll use to navigate through the html tags and parse the response from cloud phantomjs to HTML.
   
-   ```console
+   ```cmd
   pip install bs4
   ```
-   ```console
+   ```cmd
   py -2.7 –m pip install bs4
   ```
   - **Lxml**: this package is used by Beautiful soup to parse response objects. Html5lib is another package that can be used for parsing but is relatively slower.
   
-  ```console
+  ```cmd
   pip install lxml
   ```
-   ```console
+   ```cmd
   py -2.7 –m pip install lxml
   ```
   
