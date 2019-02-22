@@ -114,3 +114,7 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   In order to use cloud phantomjs you’ll need to sign up for a free account on this link https://phantomjscloud.com/. The free account will allow you to render 500 webpages/day for free and for the example we’ll be working with, 500 pages is more than sufficient. The cloud phantomjs platform offers flexible plans if you’d like to work with more pages.
   
   Once signed up you get access to an API key that you’ll need to attach to an HTTP request URL, in order to make use of your 500 webpage tier. 
+  
+- ### Let's code:
+
+  We’re now all set up to write our web scraper in python. Where to start? Well basically we’ll have to make an HTTP request to the website we want to extract data from and after getting a response, we’ll navigate through the HTML tags to get the data we want. So for our example we’ll be getting HEALTH news articles from a news website. Because why not? The news is paginated and each page contains 10 news articles. For our example we’ll only be scraping data off the first two pages to get the most recent HEALTH news.
