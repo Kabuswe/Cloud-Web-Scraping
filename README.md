@@ -108,4 +108,9 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
    ```cmd
   py -2.7 –m pip install lxml
   ```
+
+- ### Setting up cloud phantomjs:
+
+  In order to use cloud phantomjs you’ll need to sign up for a free account on this link https://phantomjscloud.com/. The free account will allow you to render 500 webpages/day for free and for the example we’ll be working with, 500 pages is more than sufficient. The cloud phantomjs platform offers flexible plans if you’d like to work with more pages.
   
+  Once signed up you get access to an API key that you’ll need to attach to an HTTP request URL, in order to make use of your 500 webpage tier. 
