@@ -19,6 +19,7 @@ This section will list and briefly explain the platforms and services we'll use 
 - **Docker container platform:** this platform we'll allow us to containerize our web scraper in a well defined environment with all necessary dependencies. This action allows our web scraper to work on any given platform that supports docker containers. In our example our docker container will be used by the *ibm cloud functions service*.
 - **Github:** we'll use Github for version control and also to link to our docker container. Linking our docker container to a github repository containing our web scraper will automatically initiate a new build for our docker container image. The new image will carry all changes made to the repository's content.
 - **Cloud phantomjs platform:** this platform will help render the web pages from the HTTP requests we'll make on the cloud. Once a page is rendered the response is returned as HTML.
+- **Rapid API platform:** this platform will help manage our API calls to the cloud phantomjs platform and also provide an interface that shows execution statistics. 
 
 ## Build flow
 
@@ -114,6 +115,10 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   In order to use cloud phantomjs you’ll need to sign up for a free account on this link https://phantomjscloud.com/. The free account will allow you to render 500 webpages/day for free and for the example we’ll be working with, 500 pages is more than sufficient. The cloud phantomjs platform offers flexible plans if you’d like to work with more pages.
   
   Once signed up you get access to an API key that you’ll need to attach to an HTTP request URL, in order to make use of your 500 webpage tier. 
+  
+- ### Setting up Rapid API:
+
+  To be able to view API call statistics you'll need to sign up for a free Rapid API account and follow the following link to get your Rapid API key that we'll later use in the code for our web scraper. Here's the link https://rapidapi.com/novaleaf/api/phantomjs-cloud-web-browser-and-webpage-processing-as-a-service. 
   
 - ### Let's code:
 
