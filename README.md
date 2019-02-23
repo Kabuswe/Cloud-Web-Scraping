@@ -143,3 +143,16 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
    }
   ```
   
+  Now that we have an idea of how the data will be structured let's go ahead and write the code that will allow us to retrieve the data.
+  
+  **Importing the packages**:
+  
+  In order to use the python packages we installed earlier, we need to import them. The code snippet below shows how this done : 
+  
+    ```python
+    from bs4 import BeautifulSoup
+    import unirest
+    ...
+  ```
+  
+  The two other packages we installed namely lxml and urllib3 are not shown above because we'll not be using them explicitly in the code.
