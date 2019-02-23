@@ -172,6 +172,16 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
     ...
   ```
   
-  Let's break down the above code. So we're using the **unirest** package to make an HTTP request and the response is stored in a variable named response. The HTTP request URL is made up of five parts. The first being the `https://phantomjscloud.p.rapidapi.com/single/browser/v1/...` which directs our request to **cloud phantomjs** through **Rapid API**. The second part `...your_cloud_phantomjs_api_key_here/...` is for the cloud phantomjs API, which allows the request to be processed by the cloud phantomjs platform. The third part is the `...requestType=text...`, this specifies the type we're requesting to be returned. If we were making a request to a webpage that returns JSON data, we'd set the the requestType to JSON. The fourth part is `...targetUrl="+"https://...`, this section allows us to indicate the URL for the webpage we want to scrape. The fifth and last being `...headers={"X-RapidAPI-Key": "your_rapid_api_key_here"}...`, this section allows us to add extra information to the HTTP request URL. In this case we're specifying the Rapid API key as extra information for the request.         
+  Let's break down the above code. So we're using the **unirest** package to make an HTTP request and the response is stored in a variable named response. The HTTP request URL is made up of **five parts**. 
+  
+  The first being the `https://phantomjscloud.p.rapidapi.com/single/browser/v1/...` which directs our request to **cloud phantomjs** through **Rapid API**. 
+  
+  The second part `...your_cloud_phantomjs_api_key_here/...` is for the cloud phantomjs API, which allows the request to be processed by the cloud phantomjs platform. 
+  
+  The third part is the `...requestType=text...`, this specifies the type we're requesting to be returned. If we were making a request to a webpage that returns JSON data, we'd set the the requestType to JSON. 
+  
+  The fourth part is `...targetUrl="+"https://...`, this section allows us to indicate the URL for the webpage we want to scrape. 
+  
+  The fifth and last being `...headers={"X-RapidAPI-Key": "your_rapid_api_key_here"}...`, this section allows us to add extra information to the HTTP request URL. In this case we're specifying the Rapid API key as extra information for the request.         
   
   
