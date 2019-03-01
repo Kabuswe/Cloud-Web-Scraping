@@ -204,4 +204,4 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   
 - ### Setting up cloudant: 
 
-Cloudant is a non-relational database service offered by the IBM cloud platform. In order to use this service you'll need to set up a free IBM cloud account. Follow this link to sign up for an account https://www.ibm.com/cloud/
+  Cloudant is a non-relational database service offered by the IBM cloud platform. In order to use this service you'll need to set up a free IBM cloud account. Follow this link to sign up for an account https://www.ibm.com/cloud/
