@@ -182,6 +182,20 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   
   The fourth part is `...targetUrl="+"https://...`, this section allows us to indicate the URL for the webpage we want to scrape. 
   
-  The fifth and last being `...headers={"X-RapidAPI-Key": "your_rapid_api_key_here"}...`, this section allows us to add extra information to the HTTP request URL. In this case we're specifying the Rapid API key as extra information for the request.         
+  The fifth and last being `...headers={"X-RapidAPI-Key": "your_rapid_api_key_here"}...`, this section allows us to add extra information to the HTTP request URL. In this case we're specifying the Rapid API key as extra information for the request.    
   
+  **Parsing the response**:
   
+  In order for us to make use of the response we get from the HTTP request we made earlier we must it parse it to HTML. Once parsed we'll be able to programmatically navigate through the HTML tags. 
+  
+  ```python
+    ...
+    soup_obj = BeautifulSoup(response.body,'lxml')
+    ...
+  ```
+  
+  Now we're able to naviagte through the HTML tags to get the data we want from the webpage. Beautiful soup allows us to navigate to a specific HTML tag or to get a list of HTML tags that have the same attribute being searched e.g a CSS class. To get an HTML tag and affect it to a variable, we can type `div_tag = soup_obj.find('div')` which returns the first occurence of the **div tag** in the HTML structure. But this is'nt too useful if the first div tag contains data that we have no interest in. 
+  
+  The best solution is providing extra details like the tag's CSS class or ID, this will then pin down a specific tag that responds to the attribute we're searching for. To do this you can type the following `div_tag = soup_obj.find('div',{'class':'td-ss-main-content')`, this gives us the div tag holding the main content of the web page. 
+  
+  If our selected tag contains other tags, we can use the variable containing the tag to further navigate to another specific tag. Let's take an example of a div tag containing several other div tags having the same attribute. To do that we type `div_tags_list = soup_obj.find_all('div',{'class':'td_module_16 td_module_wrap td-animation-stack')`, notice that in this example we use **find_all** to get a list of all the tags that correspond to the searched property. Furthermore, we can access individual attributes or get the text that's in between the tag. To get an attribute we can type `div_tag_class = div_tag.get('class')` and to get the text in between the tag we can type `div_tag_text = div_tag.getText()`.
