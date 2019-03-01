@@ -199,3 +199,9 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   The best solution is providing extra details like the tag's CSS class or ID, this will then pin down a specific tag that responds to the attribute we're searching for. To do this you can type the following `div_tag = soup_obj.find('div',{'class':'td-ss-main-content')`, this gives us the div tag holding the main content of the web page. 
   
   If our selected tag contains other tags, we can use the variable containing the tag to further navigate to another specific tag. Let's take an example of a div tag containing several other div tags having the same attribute. To do that we type `div_tags_list = soup_obj.find_all('div',{'class':'td_module_16 td_module_wrap td-animation-stack')`, notice that in this example we use **find_all** to get a list of all the tags that correspond to the searched property. Furthermore, we can access individual attributes or get the text that's in between the tag. To get an attribute we can type `div_tag_class = div_tag.get('class')` and to get the text in between the tag we can type `div_tag_text = div_tag.getText()`.
+  
+  After getting the data from a webpage, we normally have to save it somewhere. In the next section we're going to see how we can set up database service on the cloud. This service will allow us to store the data we scrape on the cloud. 
+  
+- ### Setting up cloudant: 
+
+Cloudant is a non-relational database service offered by the IBM cloud platform. In order to use this service you'll need to set up a free IBM cloud account. Follow this link to sign up for an account https://www.ibm.com/cloud/
