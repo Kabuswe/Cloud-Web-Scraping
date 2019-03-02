@@ -207,3 +207,20 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   Cloudant is a non-relational database service offered by the IBM cloud platform. In order to use this service you'll need to set up a free IBM cloud account. Follow this link to sign up for an account https://www.ibm.com/cloud/.
   
   Once signed up you can browse the IBM cloud platform catalog for all services offered by IBM cloud. In this case search the catalog for **cloudant**, create the service instance by first selecting an **authentication method** and then clicking the **create button**. Once the instance has been created you can access cloudant through the **resource list** section of your IBM cloud dashboard. Once the resource opens up, select **service credentials** on the left tab, click the **new credential** button to create credentials for the service. Once you create your new credentials, you can view them by selecting **view credentials**. The image below highlights the credentials we'll need to store data on the cloudant database service.  
+  
+  ![credentials](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/Credentials.PNG)
+
+  Now we have the credentials necessary to use the cloudant database service. The next section explains how to use cloudant in python.
+  
+  **Setting up cloudant in python:**
+  
+  In order to use cloudant in python, the cloudant package must be installed. To install use the following commands :
+  
+   ```cmd
+  pip install cloudant
+  ```
+  or
+   ```cmd
+  py -2.7 –m pip install cloudant
+  ```
+  **Connecting to cloudant in python:**
