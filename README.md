@@ -255,3 +255,9 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   ```
   
   Now that we can use cloudant to save our scrapped data, we're all set up with the tools we need to run our web scrapper. You'll find the full code in the `app.py` file of the app folder of this repository with comments explaining the code.
+  
+## 2.  Containerise the python web scraper using Docker
+
+Containers help us bind our project in an environment necessary for our project to run including all the external packages it needs. This allows our project to work anywhere and not only on the machine we worked on to create it. There several options for containerisation offered by several platforms. In this example we'll be using the docker platform to containerise our project. 
+
+In order to use docker you'll need to download and install **docker desktop** for your specific system type and operating system. For older machines it's recommended to use **docker toolbox**. In this example we'll be continuing with docker toolbox, here's a link to the download page https://docs.docker.com/toolbox/toolbox_install_windows/. Make sure to enable virtualisation in your **BIOS** before using docker toolbox or docker desktop.
