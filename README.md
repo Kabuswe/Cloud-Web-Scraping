@@ -224,3 +224,32 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   py -2.7 –m pip install cloudant
   ```
   **Connecting to cloudant in python:**
+  
+  To connect to cloudant in python you first have to import the intalled cloudant package and then provide your credentials. The code snippet below shows how to import cloudant:
+   ```python
+  from cloudant.client import Cloudant
+  ...
+  ```
+  After importing the package we can now establish a connection to the cloudant database service using our credentials with the code snippet below:
+    ```python
+  ...
+  client = Cloudant('your-username-here', 'your-password-here', url='your-url-here',adapter=Replay429Adapter(retries=10, initialBackoff=0.01))
+  client.connect()
+  ...
+  ```
+  Once we've established a connection we can now perform actions like, creating a database or adding data to an existing database. The cloudant database uses **JSON objects** as it's records. The database records in this case are calleed **documents**. For our example, the python dictionary objects holding the data scrapped from the webpage will be saved as individual documents corresponding to a record in the database. 
+  
+  To create a database we can call the **create database** method on the client variable. The code snippet below demonstrates how to create database: 
+   ```python
+  ...
+  client.connect()
+  news_articles_db = client.create_database("news_articles")
+  ...
+  ```
+  To add a record to the database we can call the **create document** method on the database object. The code snippet shows how to do exactly that:
+    ```python
+  ...
+  news_articles_db.create_document(python_dictionary)
+  client.disconnect()
+  ```
+  
