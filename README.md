@@ -228,6 +228,7 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   To connect to cloudant in python you first have to import the intalled cloudant package and then provide your credentials. The code snippet below shows how to import cloudant:
    ```python
   from cloudant.client import Cloudant
+  from cloudant.adapters import Replay429Adapter
   ...
   ```
   After importing the package we can now establish a connection to the cloudant database service using our credentials with the code snippet below:
