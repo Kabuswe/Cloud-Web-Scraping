@@ -261,3 +261,34 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
 Containers help us bind our project in an environment necessary for our project to run including all the external packages it needs. This allows our project to work anywhere and not only on the machine we worked on to create it. There several options for containerisation offered by several platforms. In this example we'll be using the docker platform to containerise our project. 
 
 In order to use docker you'll need to download and install **docker desktop** for your specific system type and operating system. For older machines it's recommended to use **docker toolbox**. In this example we'll be continuing with docker toolbox, here's a link to the download page https://docs.docker.com/toolbox/toolbox_install_windows/. Make sure to enable virtualisation in your **BIOS** before using docker toolbox or docker desktop.
+
+After successfully installing docker toolbox, you can use docker by running the **docker quick start terminal**. In order to containerise the web scraper we first need to change our current directory to the directory containing the web scraper. The directory containing the web scraper must contain a **docker file**. A docker file is a text file that contains all the commands necessary to assemble a docker image. In this example our docker file will contain the python 2.7 runtime as the parent image of the web scraper. The file also contains a command to use **python pip** to install all the packages needed to run the web scraper. The code snippets below break down the contents of the docker file necessary for the web scraper to work.
+
+First things first we need a python environment to run our python based web scraper. So for this we need to set a python runtime as the parent image of the web scraper. The referenced image is an official python image pulled directly from **docker hub**.
+```dockerfile
+FROM python:2.7-slim
+```
+Next we set the working directory to app, which will contain all the files that the web scraper needs to run and to build the docker image.
+```dockerfile
+WORKDIR /app
+```
+Once the working directory is established we need to copy all the files in our current project directory to the working directory.
+```dockerfile
+COPY . /app
+```
+After the files have been copied, all the necessary dependencies will have to installed using python pip.
+```dockerfile
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
+```
+The contents of `requirements.txt`:
+```text
+unirest
+lxml
+urllib3
+bs4
+Cloudant
+```
+Once all the dependencies are installed the web scraper is ready to run by making a command line instruction.
+```dockerfile
+CMD ["python", "app.py"]
+```
