@@ -292,3 +292,7 @@ Once all the dependencies are installed the web scraper is ready to run by makin
 ```dockerfile
 CMD ["python", "app.py"]
 ```
+Once we have our **docker file** all set up we can finally build the docker image for our web scraper by executing the following command in the docker terminal.
+```docker
+docker build --tag=web_scraper .
+```
