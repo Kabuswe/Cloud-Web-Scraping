@@ -297,7 +297,7 @@ Once we have our **docker file** all set up we can finally build the docker imag
 docker build --tag=web_scraper .
 ```
 
-## 2.  Upload Docker container of the web scraper to Docker Hub
+## 3.  Upload Docker container of the web scraper to Docker Hub
 
 Supposing that we successfully built the docker container in the previous section. **Docker hub** allows us to host our project's image much like **github repositories**. In this section we'll be uploading the already built container to docker hub. 
 
