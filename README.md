@@ -296,3 +296,29 @@ Once we have our **docker file** all set up we can finally build the docker imag
 ```docker
 docker build --tag=web_scraper .
 ```
+
+## 2.  Upload Docker container of the web scraper to Docker Hub
+
+Supposing that we successfully built the docker container in the previous section. **Docker hub** allows us to host our project's image much like **github repositories**. In this section we'll be uploading the already built container to docker hub. 
+
+In order to upload to docker hub you first need to create a free account using the following link if you don't already have an account. https://hub.docker.com/signup
+
+Once signed up take note of your credentials we'll need them in the next step. Open the docker terminal and connect to your newly created account using the docker login command.
+```docker
+docker login
+```
+After logging in we'll now tag the docker container to the docker hub account currently logged in. This action creates a repository to host the image on docker hub.
+```docker
+docker tag web_scraper user_name/web-scraper:v1
+```
+```docker
+$ docker image ls
+REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE
+user_name/web-scraper      v1                  c4b87238b670        2 hours ago         152MB
+web_scraper                latest              c4b87238b670        2 hours ago         152MB
+```
+Once the repository has been created on your machine, we can now make a **push action** to docker hub.
+```docker
+docker push user_name/web-scraper:v1
+```
+After the push action has been made and has completed the push process you can verify the created repository by accessing your account. 
