@@ -322,3 +322,27 @@ Once the repository has been created on your machine, we can now make a **push a
 docker push user_name/web-scraper:v1
 ```
 After the push action has been made and has completed the push process you can verify the created repository by accessing your account. 
+
+## 4.  Deploy the container to IBM cloud
+
+Now that the web scraper has been containerised and hosted on docker hub, we can now deploy it as a **cloud function** on ibm cloud. Once deployed as a cloud function IBM cloud makes a **pull action** on the hosted container in order to execute the web scraper on the cloud. 
+
+In order to deploy the container to IBM cloud you'll need to download and install the **IBM cloud functions CLI**. Here's the link https://cloud.ibm.com/docs/cli/reference/bluemix_cli?topic=cloud-cli-install-ibmcloud-cli#install-ibmcloud-cli .
+
+After successfully installing the IBM cloud functions CLI, open the docker terminal to install the cloud functions plugin. To install the plugin run the command below in the docker terminal:
+```docker
+ibmcloud plugin install cloud-functions
+```
+Once the plugin is installed we can now login to our IBM cloud account in order to create a cloud function using the hosted web scraper container. The IBM login command must include the **cloud foundry org** and **cloud foundry space**. If you have'nt created any cloud foundry org, the default is the email you used to sign up to IBM cloud. To confirm these details you can type **functions** in the search bar of the IBM cloud website. Once presented the functions page you can click the **start creating** button. If presented the error of `No Cloud Foundry Space`, simply close it and change the region in the region section, to the region you account is based on. Once the right region has been selected you can clearly see your cloud foundry org and cloud foundry space details. To login using these details you can execute the command below:
+```docker
+ibmcloud login -a cloud.ibm.com -o "cloud_foundry_org" -s "cloud_foundry_space"
+```
+After successfully logging in to the IBM account we now need to login to the docker hub account hosting the web scraper container.
+```docker
+docker login
+```
+Once logged in to the two accounts we can now deploy the web scraper container as a cloud function on IBM cloud. To do this we create a new action that will pull the container from docker hub.
+```docker
+ibmcloud fn action create cloud_webscraper --docker <username>/web-scraper:v1
+```
+After executing the above command, the action is created and can be viewed in the actions tab of the IBM cloud functions page. Open the created action by clicking the name. Once presented the **action's page**, select **Runtime** in order to modify the default runtime timeout of 60 seconds to 300 seconds. This done to allow the web scraper enough time to run without being interrupted. It takes roughly 60 seconds for the container to pulled by IBM cloud, so a 60 second timeout would'nt allow the web scraper to run. 
