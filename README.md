@@ -296,5 +296,3 @@ Once we have our **docker file** all set up we can finally build the docker imag
 ```docker
 docker build --tag=web_scraper .
 ```
-![docker_build_gif](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/docker_buid.gif)
-
