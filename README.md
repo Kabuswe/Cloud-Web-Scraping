@@ -355,15 +355,15 @@ The screenshots below show how to check for the created **action** on IBM cloud 
 
 **Selecting our desired Action from the actions list:**
 
-![Action1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_2.PNG)
+![Action2](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_2.PNG)
 
 **Accessing the runtime tab:**
 
-![Action1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_3.PNG)
+![Action3](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_3.PNG)
 
 **Modifying the runtime timeout:**
 
-![Action1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_4.PNG)
+![Action4](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_4.PNG)
 
 ## 5.  Create time controlled triggers on the IBM cloud functions service
 
@@ -373,4 +373,31 @@ Our example involved getting news articles from a news website. So our trigger w
 
 The screenshots below demonstrate how to add a time controlled trigger to the created action of the web scraper:
 
+**Accessing the triggers from the IBM cloud Functions page:**
+
+![Trigger1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_1.PNG)
+
+**Start the trigger creation process:**
+
+![Trigger2](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_2.PNG)
+
+**Selecting the periodic trigger type:**
+
+![Trigger3](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_3.PNG)
+
+**Configuring the trigger:**
+
+![Trigger4](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_4.PNG)
+
+**Connecting an action to the trigger:**
+
+![Trigger5](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_5.PNG)
+
+**Adding an existing action to the connection:**
+
+![Trigger6](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_6.PNG)
+
+**Viewing the connected action:**
+
+![Trigger7](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_7.PNG)
 
