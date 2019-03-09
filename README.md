@@ -1,5 +1,25 @@
 # A CLOUD BASED WEB SCRAPER
 
+## Index
+  
+  - [Introduction](#introduction) 
+  - [Platforms and services](#platforms-and-services)
+  - [Build flow](#build-flow)
+  - [Build a web scraper in python](#build-a-web-scraper-in-python)
+  
+    - [Setting up the environment](#setting-up-the-environment)
+    - [Installing the packages](#installing-the-packages)
+    - [Setting up cloud phantomjs](#setting-up-cloud-phantomjs)
+    - [Setting up Rapid API](#setting-up-rapid-api)
+    - [Writing the code](#writing-the-code)
+    - [Setting up cloudant](#setting-up-cloudant)
+    
+  - [Containerise the python web scraper using Docker](#containerise-the-python-web-scraper-using-docker)
+  - [Upload Docker container of the web scraper to Docker Hub](#upload-docker-container-of-the-web-scraper-to-docker-hub)
+  - [Deploy the container to IBM cloud](#deploy-the-container-to-ibm-cloud)
+  - [Create time controlled triggers on the IBM cloud functions service](#create-time-controlled-triggers-on-the-ibm-cloud-functions-service)
+  
+  
 ## Introduction
 
 This article will help you build a web scraper and upload it to work autonomously on the cloud. Before we deploy a web scraper to the cloud it’s important to understand what web scraping is. Web scraping as per Wikipedia, is the process extracting data from websites. Why would one need to extract data from a website? Should I be interested? What’s the point? Well the answer to these questions depends on the use case. One would scrape a website for analytical purposes or just for personal use, seeing that this information is available publicly. You can read more about web scraping from the Wikipedia article here https://en.wikipedia.org/wiki/Web_scraping, it’ll give you sufficient information to satisfy your curiosity. 
@@ -120,7 +140,7 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
 
   To be able to view API call statistics you'll need to sign up for a free Rapid API account and follow the following link to get your Rapid API key that we'll later use in the code for our web scraper. Here's the link https://rapidapi.com/novaleaf/api/phantomjs-cloud-web-browser-and-webpage-processing-as-a-service. 
   
-- ### Let's code:
+- ### Writing the code:
 
   We’re now all set up to write our web scraper in python. Where to start? Well basically we’ll have to make an HTTP request to the website we want to extract data from and after getting a response, we’ll navigate through the HTML tags to get the data we want. So for our example we’ll be getting **Business news articles** from a news website. Because why not? The news is paginated and each page contains 10 news articles. For our example we’ll only be scraping data off the first two pages to get the most recent Business news.
   
