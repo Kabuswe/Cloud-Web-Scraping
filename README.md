@@ -148,7 +148,7 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   
   The image below shows the layout used by each news article on the site :
   
-  ![news_article_layout](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/news_article.PNG)
+  ![news_article_layout](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/images/news_article.PNG)
   
   We'll be adding the data retrieved for each news article to a python dictionary object. The content of each python dictionary object will look like this :
   
@@ -228,7 +228,7 @@ In our example we’ll be using **cloud phantomjs**, which will be responsible f
   
   Once signed up you can browse the IBM cloud platform catalog for all services offered by IBM cloud. In this case search the catalog for **cloudant**, create the service instance by first selecting an **authentication method** and then clicking the **create button**. Once the instance has been created you can access cloudant through the **resource list** section of your IBM cloud dashboard. Once the resource opens up, select **service credentials** on the left tab, click the **new credential** button to create credentials for the service. Once you create your new credentials, you can view them by selecting **view credentials**. The image below highlights the credentials we'll need to store data on the cloudant database service.  
   
-  ![credentials](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/Credentials.PNG)
+  ![credentials](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/images/Credentials.PNG)
 
   Now we have the credentials necessary to use the cloudant database service. The next section explains how to use cloudant in python.
   
@@ -371,19 +371,19 @@ The screenshots below show how to check for the created **action** on IBM cloud 
 
 **Accessing the actions from the IBM cloud Functions page:**
 
-![Action1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_1.PNG)
+![Action1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/images/actions_1.PNG)
 
 **Selecting our desired Action from the actions list:**
 
-![Action2](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_2.PNG)
+![Action2](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/images/actions_2.PNG)
 
 **Accessing the runtime tab:**
 
-![Action3](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_3.PNG)
+![Action3](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/images/actions_3.PNG)
 
 **Modifying the runtime timeout:**
 
-![Action4](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_4.PNG)
+![Action4](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/images/actions_4.PNG)
 
 ## 5.  Create time controlled triggers on the IBM cloud functions service
 
@@ -395,29 +395,29 @@ The screenshots below demonstrate how to add a time controlled trigger to the cr
 
 **Accessing the triggers from the IBM cloud Functions page:**
 
-![Trigger1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_1.PNG)
+![Trigger1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/images/triggers_1.PNG)
 
 **Start the trigger creation process:**
 
-![Trigger2](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_2.PNG)
+![Trigger2](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/images/triggers_2.PNG)
 
 **Selecting the periodic trigger type:**
 
-![Trigger3](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_3.PNG)
+![Trigger3](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/images/triggers_3.PNG)
 
 **Configuring the trigger:**
 
-![Trigger4](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_4.PNG)
+![Trigger4](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/images/triggers_4.PNG)
 
 **Connecting an action to the trigger:**
 
-![Trigger5](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_5.PNG)
+![Trigger5](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/images/triggers_5.PNG)
 
 **Adding an existing action to the connection:**
 
-![Trigger6](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_6.PNG)
+![Trigger6](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/images/triggers_6.PNG)
 
 **Viewing the connected action:**
 
-![Trigger7](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/triggers_7.PNG)
+![Trigger7](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/images/triggers_7.PNG)
 
