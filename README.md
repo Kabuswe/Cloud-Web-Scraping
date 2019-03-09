@@ -5,7 +5,7 @@
   - [Introduction](#introduction) 
   - [Platforms and services](#platforms-and-services)
   - [Build flow](#build-flow)
-  - [Build a web scraper in python](#build-a-web-scraper-in-python)
+  - [Build a web scraper in python](#1--build-a-web-scraper-in-python)
   
     - [Setting up the environment](#setting-up-the-environment)
     - [Installing the packages](#installing-the-packages)
@@ -14,10 +14,10 @@
     - [Writing the code](#writing-the-code)
     - [Setting up cloudant](#setting-up-cloudant)
     
-  - [Containerise the python web scraper using Docker](#containerise-the-python-web-scraper-using-docker)
-  - [Upload Docker container of the web scraper to Docker Hub](#upload-docker-container-of-the-web-scraper-to-docker-hub)
-  - [Deploy the container to IBM cloud](#deploy-the-container-to-ibm-cloud)
-  - [Create time controlled triggers on the IBM cloud functions service](#create-time-controlled-triggers-on-the-ibm-cloud-functions-service)
+  - [Containerise the python web scraper using Docker](#2--containerise-the-python-web-scraper-using-docker)
+  - [Upload Docker container of the web scraper to Docker Hub](#3--upload-docker-container-of-the-web-scraper-to-docker-hub)
+  - [Deploy the container to IBM cloud](#4--deploy-the-container-to-ibm-cloud)
+  - [Create time controlled triggers on the IBM cloud functions service](#5--create-time-controlled-triggers-on-the-ibm-cloud-functions-service)
   
   
 ## Introduction
