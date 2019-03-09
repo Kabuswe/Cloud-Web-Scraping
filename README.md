@@ -346,3 +346,20 @@ Once logged in to the two accounts we can now deploy the web scraper container a
 ibmcloud fn action create cloud_webscraper --docker <username>/web-scraper:v1
 ```
 After executing the above command, the action is created and can be viewed in the actions tab of the IBM cloud functions page. Open the created action by clicking the name. Once presented the **action's page**, select **Runtime** in order to modify the default runtime timeout of 60 seconds to 300 seconds. This done to allow the web scraper enough time to run without being interrupted. It takes roughly 60 seconds for the container to pulled by IBM cloud, so a 60 second timeout would'nt allow the web scraper to run. 
+
+The screenshots below show how to check for the created **action** on IBM cloud and how to modidify the runtime timeout:
+**Accessing the actions from the IBM cloud Functions page:**
+
+![Action1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_1.PNG)
+
+**Selecting our desired Action from the actions list:**
+
+![Action1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_2.PNG)
+
+**Accessing the runtime tab:**
+
+![Action1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_3.PNG)
+
+**Modifying the runtime timeout:**
+
+![Action1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_4.PNG)
