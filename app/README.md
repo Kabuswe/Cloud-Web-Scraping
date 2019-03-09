@@ -17,6 +17,3 @@
 ### 4. [Deploy your container to IBM cloud](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/README.md#4--deploy-the-container-to-ibm-cloud) 
 
 ### 5. [Make your web scraper work autonomously on the cloud](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/README.md#5--create-time-controlled-triggers-on-the-ibm-cloud-functions-service) 
-×
-Drag and Drop
-The image will be downloaded by Fatkun
