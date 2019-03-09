@@ -348,6 +348,7 @@ ibmcloud fn action create cloud_webscraper --docker <username>/web-scraper:v1
 After executing the above command, the action is created and can be viewed in the actions tab of the IBM cloud functions page. Open the created action by clicking the name. Once presented the **action's page**, select **Runtime** in order to modify the default runtime timeout of 60 seconds to 300 seconds. This done to allow the web scraper enough time to run without being interrupted. It takes roughly 60 seconds for the container to pulled by IBM cloud, so a 60 second timeout would'nt allow the web scraper to run. 
 
 The screenshots below show how to check for the created **action** on IBM cloud and how to modidify the runtime timeout:
+
 **Accessing the actions from the IBM cloud Functions page:**
 
 ![Action1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_1.PNG)
@@ -363,3 +364,13 @@ The screenshots below show how to check for the created **action** on IBM cloud 
 **Modifying the runtime timeout:**
 
 ![Action1](https://github.com/Kabuswe/Cloud-Web-Scraping/blob/master/actions_4.PNG)
+
+## 5.  Create time controlled triggers on the IBM cloud functions service
+
+Triggers are very useful in completing the autonomous experience. This means that the cloud function can be executed without you having to explicitly run it. There several types of triggers we could use on an action but for this is example we'll be using the time controlled triggers. This means that for the days selected and times selected the action will be triggered on the cloud and will work fully autonomously.
+
+Our example involved getting news articles from a news website. So our trigger will basically execute the action that executes the web scraper to get scrap news articles from the site every morning when the site is updated. Executing the web scraper then adds the latest articles to the cloud based database and this sums up the entire project of an autonomous cloud based web scraper. 
+
+The screenshots below demonstrate how to add a time controlled trigger to the created action of the web scraper:
+
+
