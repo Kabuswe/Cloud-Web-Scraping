@@ -22,16 +22,17 @@
   
 ## Introduction
 
-This article will help you build a web scraper and upload it to work autonomously on the cloud. Before we deploy a web scraper to the cloud it’s important to understand what web scraping is. Web scraping as per Wikipedia, is the process extracting data from websites. Why would one need to extract data from a website? Should I be interested? What’s the point? Well the answer to these questions depends on the use case. One would scrape a website for analytical purposes or just for personal use, seeing that this information is available publicly. You can read more about web scraping from the Wikipedia article here https://en.wikipedia.org/wiki/Web_scraping, it’ll give you sufficient information to satisfy your curiosity. 
+In this article, we will guide you through the process of building a web scraper and setting it up to run autonomously on the cloud. It's important to understand what web scraping is before we delve into deployment. According to Wikipedia, web scraping is the process of extracting data from websites. There are various reasons one might want to extract data from a website, such as for analytical purposes or personal use. The use case will depend on the specific needs and goals of the individual or organization. If you're interested in learning more about web scraping, you can check out the Wikipedia article linked here: https://en.wikipedia.org/wiki/Web_scraping. It provides a comprehensive overview of the topic. 
 
-They're several web scraping techniques that exist and that can be done in several programming languages, you’re free to choose your preferred tool to get the work done. In this article we’ll be working with the python programming language. No need to worry, the syntax is fairly simple and easy to understand and of course I’ll be explaining every step so you don’t get confused. If you already understand basic python programming syntax, this will be a breeze. Hang in there and let’s get it done.
-So what will our web scraper do? Our web scraper is going to be assigned the task of extracting news articles from a news site. Because the main reason one would want an autonomous web scraper is to extract data that is constantly being updated. 
+There are several techniques for web scraping that can be implemented using a variety of programming languages. In this article, we will be using the Python programming language. Don't worry if you're not familiar with Python, as we will be explaining each step in detail. If you do have a basic understanding of Python syntax, this should be a fairly easy process.
+
+Our web scraper will be tasked with extracting news articles from a specific news website. The main reason for creating an autonomous web scraper is to extract data that is constantly being updated, such as news articles. This allows us to easily gather and analyze the latest information from a particular site. So, let's get started and build our web scraper!
 
 **Disclaimer: before scraping any website be sure to read their user terms and conditions. Some sites may take legal action if you don't follow usage guidelines.**  
 
 ## Platforms and services 
 
-This section will list and briefly explain the platforms and services we'll use for our cloud based web scraper example.
+In this section, we will provide an overview of the platforms and services we will be using to create a cloud-based web scraper as an example. We will briefly explain the purpose and function of each platform or service to give you a better understanding of how they will be used in the process.
 
 - **IBM cloud platform:**  this will be our cloud platform of choice, for the reason being that you can access several services without having to provide credit card information. For our example we'll get to work with :
   - **Cloud functions service:** this service will allow us to execute our web scraper on the cloud. 
@@ -43,7 +44,7 @@ This section will list and briefly explain the platforms and services we'll use 
 
 ## Build flow
 
-It always helps to know the end goal of a project to better understand what features to implement. Below is a list of steps we’ll take to reach our end goal: 
+Having a clear understanding of the end goal of a project can help guide the development process and ensure that the necessary features are implemented. To help you understand the steps we will take to achieve our end goal, we have listed them below: 
 
 - Build a web scraper In python,
 - Containerise the python web scraper using Docker,
@@ -53,9 +54,9 @@ It always helps to know the end goal of a project to better understand what feat
 
 ## 1.  Build a web scraper in python
 
-Python proposes several libraries for your web scraping needs, ranging from the **requests library** for making HTTP requests to **selenium** for browser automation and testing. These libraries are very useful if you’re using your machine but for our use case, we want it to work on the cloud independent of our machines and the network latency we are subjected to. You can read about selenium web browser automation here https://www.seleniumhq.org/. 
+Python offers a variety of libraries for web scraping, such as the **requests library** for making HTTP requests and **selenium** for browser automation and testing. These libraries can be useful when running web scrapers on a local machine, but for our cloud-based example, we want to be able to run our web scraper independently of our local machine and network latency. To achieve this, we will be using **cloud phantomjs**, which will handle rendering our website on the cloud, and the **unirest library** to make HTTP requests to cloud phantomjs. Unirest is an open-source library that allows us to make requests to both simple HTML websites and JavaScript-driven websites. You can learn more about Unirest at http://unirest.io/python.html.
 
-In our example we’ll be using **cloud phantomjs**, which will be responsible for rendering our website on the cloud and **unirest library** to make an http request to cloud phantomjs. Unirest is an open source library that allows us to make HTTP requests for simple html websites and also JavaScript driven websites. You can further read on Unirest here http://unirest.io/python.html. Once the request is made, a response is returned in the form of html. To be able to navigate through the html tags, we have to properly parse the response. But how? The answer is **Beautiful Soup**, another python library that allows us to parse the html response. Once parsed we can then easily navigate through the html tags programmatically with Beautiful Soup. 
+Once we make the request, we receive a response in the form of HTML. To be able to navigate through the HTML tags and extract the desired data, we need to properly parse the response. To do this, we will use the **Beautiful Soup library**, another Python library that allows us to parse HTML responses. With Beautiful Soup, we can easily navigate through the HTML tags programmatically and extract the information we need. 
 
 - ### Setting up the environment: 
 
